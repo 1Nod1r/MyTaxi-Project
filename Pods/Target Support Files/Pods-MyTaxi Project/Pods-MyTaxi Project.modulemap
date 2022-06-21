@@ -1,0 +1,6 @@
+framework module Pods_MyTaxi_Project {
+  umbrella header "Pods-MyTaxi Project-umbrella.h"
+
+  export *
+  module * { export * }
+}
