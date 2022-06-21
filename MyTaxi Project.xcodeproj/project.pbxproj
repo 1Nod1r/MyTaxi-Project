@@ -9,21 +9,108 @@
 /* Begin PBXBuildFile section */
 		860A686328606ECA0032603D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860A686228606ECA0032603D /* AppDelegate.swift */; };
 		860A686528606ECA0032603D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860A686428606ECA0032603D /* SceneDelegate.swift */; };
-		860A686728606ECA0032603D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860A686628606ECA0032603D /* ViewController.swift */; };
-		860A686A28606ECA0032603D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 860A686828606ECA0032603D /* Main.storyboard */; };
+		860A686728606ECA0032603D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860A686628606ECA0032603D /* MainViewController.swift */; };
 		860A686C28606ECB0032603D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 860A686B28606ECB0032603D /* Assets.xcassets */; };
 		860A686F28606ECB0032603D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 860A686D28606ECB0032603D /* LaunchScreen.storyboard */; };
+		86795CE928609E72006E207B /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86795CE828609E72006E207B /* SideMenuViewController.swift */; };
+		86795CEC2860A0D3006E207B /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86795CEB2860A0D3006E207B /* SideMenuView.swift */; };
+		86795CEE2860A229006E207B /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86795CED2860A229006E207B /* HeaderView.swift */; };
+		86795CF02860A48F006E207B /* SideMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86795CEF2860A48F006E207B /* SideMenuTableViewCell.swift */; };
+		86AC34562861A4A90032A58F /* PanelHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AC34552861A4A90032A58F /* PanelHeaderView.swift */; };
+		86AC34582861A5590032A58F /* PanelLocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AC34572861A5590032A58F /* PanelLocationTableViewCell.swift */; };
+		86AC345A2861B3B90032A58F /* PanelHelpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AC34592861B3B90032A58F /* PanelHelpTableViewCell.swift */; };
+		86AC345C2861CDB90032A58F /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AC345B2861CDB80032A58F /* PersonTableViewCell.swift */; };
+		86AC345E2861D6D20032A58F /* PanelHelpCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AC345D2861D6D20032A58F /* PanelHelpCollectionViewCell.swift */; };
+		86AC34662861DAFD0032A58F /* GeneralInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AC34652861DAFD0032A58F /* GeneralInfoTableViewCell.swift */; };
+		86AC34692861E53D0032A58F /* BIllTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AC34682861E53D0032A58F /* BIllTableViewCell.swift */; };
+		86AC346C2861E8D90032A58F /* TotalInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AC346B2861E8D90032A58F /* TotalInfoTableViewCell.swift */; };
+		86AC34782861EB8D0032A58F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 86AC34722861EB8C0032A58F /* README.md */; };
+		86AC34792861EB8D0032A58F /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = 86AC34732861EB8C0032A58F /* LICENSE.md */; };
+		86AC347B2861EBAE0032A58F /* MapboxCommon.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86AC346D2861EB7A0032A58F /* MapboxCommon.xcframework */; };
+		86AC347C2861EBAE0032A58F /* MapboxCommon.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 86AC346D2861EB7A0032A58F /* MapboxCommon.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		86AC347E2861EBB60032A58F /* MapboxCoreMaps.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86AC346F2861EB8B0032A58F /* MapboxCoreMaps.xcframework */; };
+		86AC347F2861EBB60032A58F /* MapboxCoreMaps.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 86AC346F2861EB8B0032A58F /* MapboxCoreMaps.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		86AC34802861EBB70032A58F /* MapboxMaps.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86AC34742861EB8D0032A58F /* MapboxMaps.xcframework */; };
+		86AC34812861EBB70032A58F /* MapboxMaps.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 86AC34742861EB8D0032A58F /* MapboxMaps.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		86AC34822861EBB80032A58F /* MapboxMobileEvents.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86AC34712861EB8C0032A58F /* MapboxMobileEvents.xcframework */; };
+		86AC34832861EBB80032A58F /* MapboxMobileEvents.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 86AC34712861EB8C0032A58F /* MapboxMobileEvents.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		86AC34842861EBB90032A58F /* Pods_MyTaxi_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF4C02DA56791D916D4EACBB /* Pods_MyTaxi_Project.framework */; };
+		86AC34852861EBB90032A58F /* Pods_MyTaxi_Project.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FF4C02DA56791D916D4EACBB /* Pods_MyTaxi_Project.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		86AC34862861EBBA0032A58F /* Turf.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86AC34702861EB8C0032A58F /* Turf.xcframework */; };
+		86AC34872861EBBA0032A58F /* Turf.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 86AC34702861EB8C0032A58F /* Turf.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		86AFC9EB2860773300852FB5 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AFC9EA2860773300852FB5 /* MainView.swift */; };
+		86AFC9ED2860809700852FB5 /* MainBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AFC9EC2860809700852FB5 /* MainBottomView.swift */; };
+		86AFC9F02860810700852FB5 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AFC9EF2860810600852FB5 /* MainTableViewCell.swift */; };
+		86AFC9F32860832D00852FB5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AFC9F22860832D00852FB5 /* Extensions.swift */; };
+		86EF507F2860CD030013147B /* MyRidesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EF507E2860CD030013147B /* MyRidesViewController.swift */; };
+		86EF50822860CD180013147B /* MyRidesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EF50812860CD180013147B /* MyRidesView.swift */; };
+		86EF50842860CE8B0013147B /* MyRidesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EF50832860CE8B0013147B /* MyRidesTableViewCell.swift */; };
+		86F470E52860E4C600425ED2 /* TripDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F470E42860E4C600425ED2 /* TripDetailViewController.swift */; };
+		86F470E82860E58200425ED2 /* TripDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F470E72860E58200425ED2 /* TripDetailView.swift */; };
+		86F470EA2860E75E00425ED2 /* TripPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F470E92860E75E00425ED2 /* TripPanelViewController.swift */; };
+		86F470ED2860E81200425ED2 /* PanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F470EC2860E81200425ED2 /* PanelView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		86AC347D2861EBAE0032A58F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				86AC34872861EBBA0032A58F /* Turf.xcframework in Embed Frameworks */,
+				86AC347F2861EBB60032A58F /* MapboxCoreMaps.xcframework in Embed Frameworks */,
+				86AC34832861EBB80032A58F /* MapboxMobileEvents.xcframework in Embed Frameworks */,
+				86AC347C2861EBAE0032A58F /* MapboxCommon.xcframework in Embed Frameworks */,
+				86AC34812861EBB70032A58F /* MapboxMaps.xcframework in Embed Frameworks */,
+				86AC34852861EBB90032A58F /* Pods_MyTaxi_Project.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		860A685F28606ECA0032603D /* MyTaxi Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MyTaxi Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		860A686228606ECA0032603D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		860A686428606ECA0032603D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		860A686628606ECA0032603D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		860A686928606ECA0032603D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		860A686628606ECA0032603D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		860A686B28606ECB0032603D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		860A686E28606ECB0032603D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		860A687028606ECB0032603D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86795CE828609E72006E207B /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
+		86795CEB2860A0D3006E207B /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
+		86795CED2860A229006E207B /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		86795CEF2860A48F006E207B /* SideMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewCell.swift; sourceTree = "<group>"; };
+		86AC34552861A4A90032A58F /* PanelHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanelHeaderView.swift; sourceTree = "<group>"; };
+		86AC34572861A5590032A58F /* PanelLocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanelLocationTableViewCell.swift; sourceTree = "<group>"; };
+		86AC34592861B3B90032A58F /* PanelHelpTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanelHelpTableViewCell.swift; sourceTree = "<group>"; };
+		86AC345B2861CDB80032A58F /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
+		86AC345D2861D6D20032A58F /* PanelHelpCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanelHelpCollectionViewCell.swift; sourceTree = "<group>"; };
+		86AC34652861DAFD0032A58F /* GeneralInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralInfoTableViewCell.swift; sourceTree = "<group>"; };
+		86AC34682861E53D0032A58F /* BIllTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BIllTableViewCell.swift; sourceTree = "<group>"; };
+		86AC346B2861E8D90032A58F /* TotalInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalInfoTableViewCell.swift; sourceTree = "<group>"; };
+		86AC346D2861EB7A0032A58F /* MapboxCommon.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = MapboxCommon.xcframework; sourceTree = "<group>"; };
+		86AC346F2861EB8B0032A58F /* MapboxCoreMaps.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = MapboxCoreMaps.xcframework; sourceTree = "<group>"; };
+		86AC34702861EB8C0032A58F /* Turf.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = Turf.xcframework; sourceTree = "<group>"; };
+		86AC34712861EB8C0032A58F /* MapboxMobileEvents.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = MapboxMobileEvents.xcframework; sourceTree = "<group>"; };
+		86AC34722861EB8C0032A58F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		86AC34732861EB8C0032A58F /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		86AC34742861EB8D0032A58F /* MapboxMaps.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = MapboxMaps.xcframework; sourceTree = "<group>"; };
+		86AFC9EA2860773300852FB5 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		86AFC9EC2860809700852FB5 /* MainBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBottomView.swift; sourceTree = "<group>"; };
+		86AFC9EF2860810600852FB5 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		86AFC9F22860832D00852FB5 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		86EF507E2860CD030013147B /* MyRidesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRidesViewController.swift; sourceTree = "<group>"; };
+		86EF50812860CD180013147B /* MyRidesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRidesView.swift; sourceTree = "<group>"; };
+		86EF50832860CE8B0013147B /* MyRidesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRidesTableViewCell.swift; sourceTree = "<group>"; };
+		86F470E42860E4C600425ED2 /* TripDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailViewController.swift; sourceTree = "<group>"; };
+		86F470E72860E58200425ED2 /* TripDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailView.swift; sourceTree = "<group>"; };
+		86F470E92860E75E00425ED2 /* TripPanelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripPanelViewController.swift; sourceTree = "<group>"; };
+		86F470EC2860E81200425ED2 /* PanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanelView.swift; sourceTree = "<group>"; };
+		92626728EE3AAA71EEECCD9E /* Pods-MyTaxi Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTaxi Project.debug.xcconfig"; path = "Target Support Files/Pods-MyTaxi Project/Pods-MyTaxi Project.debug.xcconfig"; sourceTree = "<group>"; };
+		DF13E46E5A6F636AE16680B2 /* Pods-MyTaxi Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTaxi Project.release.xcconfig"; path = "Target Support Files/Pods-MyTaxi Project/Pods-MyTaxi Project.release.xcconfig"; sourceTree = "<group>"; };
+		FF4C02DA56791D916D4EACBB /* Pods_MyTaxi_Project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyTaxi_Project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +118,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86AC34862861EBBA0032A58F /* Turf.xcframework in Frameworks */,
+				86AC347E2861EBB60032A58F /* MapboxCoreMaps.xcframework in Frameworks */,
+				86AC34842861EBB90032A58F /* Pods_MyTaxi_Project.framework in Frameworks */,
+				86AC347B2861EBAE0032A58F /* MapboxCommon.xcframework in Frameworks */,
+				86AC34802861EBB70032A58F /* MapboxMaps.xcframework in Frameworks */,
+				86AC34822861EBB80032A58F /* MapboxMobileEvents.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +135,8 @@
 			children = (
 				860A686128606ECA0032603D /* MyTaxi Project */,
 				860A686028606ECA0032603D /* Products */,
+				92AEC1896CAE0AB7F871D832 /* Pods */,
+				9BA99092C12A7B6EAD1707D5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +151,213 @@
 		860A686128606ECA0032603D /* MyTaxi Project */ = {
 			isa = PBXGroup;
 			children = (
-				860A686228606ECA0032603D /* AppDelegate.swift */,
-				860A686428606ECA0032603D /* SceneDelegate.swift */,
-				860A686628606ECA0032603D /* ViewController.swift */,
-				860A686828606ECA0032603D /* Main.storyboard */,
-				860A686B28606ECB0032603D /* Assets.xcassets */,
-				860A686D28606ECB0032603D /* LaunchScreen.storyboard */,
+				86AFC9E9286076F800852FB5 /* MainViewController */,
+				86F470E32860E4B300425ED2 /* TripDetailViewController */,
+				86EF507D2860CCE90013147B /* MyRides */,
+				86795CE728609E5B006E207B /* SideMenuViewController */,
+				86AFC9F12860832300852FB5 /* Extensions */,
+				86AFC9E7286076DF00852FB5 /* Delegates */,
+				86AFC9E8286076E500852FB5 /* Extra */,
 				860A687028606ECB0032603D /* Info.plist */,
+				86AC346D2861EB7A0032A58F /* MapboxCommon.xcframework */,
+				86AC34732861EB8C0032A58F /* LICENSE.md */,
+				86AC346F2861EB8B0032A58F /* MapboxCoreMaps.xcframework */,
+				86AC34742861EB8D0032A58F /* MapboxMaps.xcframework */,
+				86AC34712861EB8C0032A58F /* MapboxMobileEvents.xcframework */,
+				86AC34722861EB8C0032A58F /* README.md */,
+				86AC34702861EB8C0032A58F /* Turf.xcframework */,
 			);
 			path = "MyTaxi Project";
+			sourceTree = "<group>";
+		};
+		86795CE728609E5B006E207B /* SideMenuViewController */ = {
+			isa = PBXGroup;
+			children = (
+				86795CE828609E72006E207B /* SideMenuViewController.swift */,
+				86795CEA2860A0BE006E207B /* Views */,
+			);
+			path = SideMenuViewController;
+			sourceTree = "<group>";
+		};
+		86795CEA2860A0BE006E207B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				86795CEB2860A0D3006E207B /* SideMenuView.swift */,
+				86795CED2860A229006E207B /* HeaderView.swift */,
+				86795CEF2860A48F006E207B /* SideMenuTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		86AC345F2861D6D60032A58F /* PanelHelp */ = {
+			isa = PBXGroup;
+			children = (
+				86AC34592861B3B90032A58F /* PanelHelpTableViewCell.swift */,
+				86AC345D2861D6D20032A58F /* PanelHelpCollectionViewCell.swift */,
+			);
+			path = PanelHelp;
+			sourceTree = "<group>";
+		};
+		86AC34602861D6DE0032A58F /* PanelHeader */ = {
+			isa = PBXGroup;
+			children = (
+				86AC34552861A4A90032A58F /* PanelHeaderView.swift */,
+			);
+			path = PanelHeader;
+			sourceTree = "<group>";
+		};
+		86AC34612861D6EA0032A58F /* PanelLocation */ = {
+			isa = PBXGroup;
+			children = (
+				86AC34572861A5590032A58F /* PanelLocationTableViewCell.swift */,
+			);
+			path = PanelLocation;
+			sourceTree = "<group>";
+		};
+		86AC34622861D6F00032A58F /* PersonTable */ = {
+			isa = PBXGroup;
+			children = (
+				86AC345B2861CDB80032A58F /* PersonTableViewCell.swift */,
+			);
+			path = PersonTable;
+			sourceTree = "<group>";
+		};
+		86AC34642861DAE00032A58F /* GeneralInfo */ = {
+			isa = PBXGroup;
+			children = (
+				86AC34652861DAFD0032A58F /* GeneralInfoTableViewCell.swift */,
+			);
+			path = GeneralInfo;
+			sourceTree = "<group>";
+		};
+		86AC34672861E5210032A58F /* BillInfo */ = {
+			isa = PBXGroup;
+			children = (
+				86AC34682861E53D0032A58F /* BIllTableViewCell.swift */,
+			);
+			path = BillInfo;
+			sourceTree = "<group>";
+		};
+		86AC346A2861E8B70032A58F /* TotalInfo */ = {
+			isa = PBXGroup;
+			children = (
+				86AC346B2861E8D90032A58F /* TotalInfoTableViewCell.swift */,
+			);
+			path = TotalInfo;
+			sourceTree = "<group>";
+		};
+		86AFC9E7286076DF00852FB5 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				860A686228606ECA0032603D /* AppDelegate.swift */,
+				860A686428606ECA0032603D /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		86AFC9E8286076E500852FB5 /* Extra */ = {
+			isa = PBXGroup;
+			children = (
+				860A686B28606ECB0032603D /* Assets.xcassets */,
+				860A686D28606ECB0032603D /* LaunchScreen.storyboard */,
+			);
+			path = Extra;
+			sourceTree = "<group>";
+		};
+		86AFC9E9286076F800852FB5 /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				860A686628606ECA0032603D /* MainViewController.swift */,
+				86AFC9EE286080F200852FB5 /* Views */,
+			);
+			path = MainViewController;
+			sourceTree = "<group>";
+		};
+		86AFC9EE286080F200852FB5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				86AFC9EA2860773300852FB5 /* MainView.swift */,
+				86AFC9EC2860809700852FB5 /* MainBottomView.swift */,
+				86AFC9EF2860810600852FB5 /* MainTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		86AFC9F12860832300852FB5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				86AFC9F22860832D00852FB5 /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		86EF507D2860CCE90013147B /* MyRides */ = {
+			isa = PBXGroup;
+			children = (
+				86EF507E2860CD030013147B /* MyRidesViewController.swift */,
+				86EF50802860CD070013147B /* Views */,
+			);
+			path = MyRides;
+			sourceTree = "<group>";
+		};
+		86EF50802860CD070013147B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				86EF50812860CD180013147B /* MyRidesView.swift */,
+				86EF50832860CE8B0013147B /* MyRidesTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		86F470E32860E4B300425ED2 /* TripDetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				86F470E92860E75E00425ED2 /* TripPanelViewController.swift */,
+				86F470E42860E4C600425ED2 /* TripDetailViewController.swift */,
+				86F470EB2860E80200425ED2 /* PanelViews */,
+				86F470E62860E57200425ED2 /* DetailViews */,
+			);
+			path = TripDetailViewController;
+			sourceTree = "<group>";
+		};
+		86F470E62860E57200425ED2 /* DetailViews */ = {
+			isa = PBXGroup;
+			children = (
+				86F470E72860E58200425ED2 /* TripDetailView.swift */,
+			);
+			path = DetailViews;
+			sourceTree = "<group>";
+		};
+		86F470EB2860E80200425ED2 /* PanelViews */ = {
+			isa = PBXGroup;
+			children = (
+				86F470EC2860E81200425ED2 /* PanelView.swift */,
+				86AC34602861D6DE0032A58F /* PanelHeader */,
+				86AC34612861D6EA0032A58F /* PanelLocation */,
+				86AC345F2861D6D60032A58F /* PanelHelp */,
+				86AC34622861D6F00032A58F /* PersonTable */,
+				86AC34642861DAE00032A58F /* GeneralInfo */,
+				86AC34672861E5210032A58F /* BillInfo */,
+				86AC346A2861E8B70032A58F /* TotalInfo */,
+			);
+			path = PanelViews;
+			sourceTree = "<group>";
+		};
+		92AEC1896CAE0AB7F871D832 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				92626728EE3AAA71EEECCD9E /* Pods-MyTaxi Project.debug.xcconfig */,
+				DF13E46E5A6F636AE16680B2 /* Pods-MyTaxi Project.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9BA99092C12A7B6EAD1707D5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FF4C02DA56791D916D4EACBB /* Pods_MyTaxi_Project.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +367,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 860A687328606ECB0032603D /* Build configuration list for PBXNativeTarget "MyTaxi Project" */;
 			buildPhases = (
+				895E5A4565432231922A3E25 /* [CP] Check Pods Manifest.lock */,
 				860A685B28606ECA0032603D /* Sources */,
 				860A685C28606ECA0032603D /* Frameworks */,
 				860A685D28606ECA0032603D /* Resources */,
+				0545747090D0377B23CDFC11 /* [CP] Embed Pods Frameworks */,
+				86AC347D2861EBAE0032A58F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -111,6 +407,8 @@
 				Base,
 			);
 			mainGroup = 860A685628606ECA0032603D;
+			packageReferences = (
+			);
 			productRefGroup = 860A686028606ECA0032603D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,36 +423,94 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86AC34792861EB8D0032A58F /* LICENSE.md in Resources */,
+				86AC34782861EB8D0032A58F /* README.md in Resources */,
 				860A686F28606ECB0032603D /* LaunchScreen.storyboard in Resources */,
 				860A686C28606ECB0032603D /* Assets.xcassets in Resources */,
-				860A686A28606ECA0032603D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0545747090D0377B23CDFC11 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyTaxi Project/Pods-MyTaxi Project-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyTaxi Project/Pods-MyTaxi Project-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyTaxi Project/Pods-MyTaxi Project-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		895E5A4565432231922A3E25 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyTaxi Project-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		860A685B28606ECA0032603D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				860A686728606ECA0032603D /* ViewController.swift in Sources */,
+				86F470E52860E4C600425ED2 /* TripDetailViewController.swift in Sources */,
+				86F470ED2860E81200425ED2 /* PanelView.swift in Sources */,
+				86AC346C2861E8D90032A58F /* TotalInfoTableViewCell.swift in Sources */,
+				86795CE928609E72006E207B /* SideMenuViewController.swift in Sources */,
+				860A686728606ECA0032603D /* MainViewController.swift in Sources */,
+				86AC345C2861CDB90032A58F /* PersonTableViewCell.swift in Sources */,
+				86EF507F2860CD030013147B /* MyRidesViewController.swift in Sources */,
+				86AC345A2861B3B90032A58F /* PanelHelpTableViewCell.swift in Sources */,
+				86AFC9EB2860773300852FB5 /* MainView.swift in Sources */,
+				86AFC9ED2860809700852FB5 /* MainBottomView.swift in Sources */,
 				860A686328606ECA0032603D /* AppDelegate.swift in Sources */,
+				86795CEE2860A229006E207B /* HeaderView.swift in Sources */,
+				86AFC9F02860810700852FB5 /* MainTableViewCell.swift in Sources */,
+				86AC34582861A5590032A58F /* PanelLocationTableViewCell.swift in Sources */,
+				86795CEC2860A0D3006E207B /* SideMenuView.swift in Sources */,
+				86AC34662861DAFD0032A58F /* GeneralInfoTableViewCell.swift in Sources */,
 				860A686528606ECA0032603D /* SceneDelegate.swift in Sources */,
+				86795CF02860A48F006E207B /* SideMenuTableViewCell.swift in Sources */,
+				86F470EA2860E75E00425ED2 /* TripPanelViewController.swift in Sources */,
+				86F470E82860E58200425ED2 /* TripDetailView.swift in Sources */,
+				86AC345E2861D6D20032A58F /* PanelHelpCollectionViewCell.swift in Sources */,
+				86EF50842860CE8B0013147B /* MyRidesTableViewCell.swift in Sources */,
+				86EF50822860CD180013147B /* MyRidesView.swift in Sources */,
+				86AFC9F32860832D00852FB5 /* Extensions.swift in Sources */,
+				86AC34692861E53D0032A58F /* BIllTableViewCell.swift in Sources */,
+				86AC34562861A4A90032A58F /* PanelHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		860A686828606ECA0032603D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				860A686928606ECA0032603D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		860A686D28606ECB0032603D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -282,6 +638,7 @@
 		};
 		860A687428606ECB0032603D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92626728EE3AAA71EEECCD9E /* Pods-MyTaxi Project.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -292,7 +649,6 @@
 				INFOPLIST_FILE = "MyTaxi Project/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -310,6 +666,7 @@
 		};
 		860A687528606ECB0032603D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF13E46E5A6F636AE16680B2 /* Pods-MyTaxi Project.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -320,7 +677,6 @@
 				INFOPLIST_FILE = "MyTaxi Project/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
