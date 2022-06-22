@@ -15,7 +15,7 @@ class PersonTableViewCell: UITableViewCell {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "personImage")
         imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = 30
+        imageView.layer.cornerRadius = 23
         return imageView
     }()
     
@@ -38,28 +38,28 @@ class PersonTableViewCell: UITableViewCell {
     private let ratingNumber: UILabel = {
         let label = UILabel()
         label.text = "5 ⭐️"
-        label.font = .systemFont(ofSize: 17, weight: .bold)
+        label.font = .systemFont(ofSize: 20, weight: .bold)
         return label
     }()
     
     private let pathCount: UILabel = {
         let label = UILabel()
         label.text = "1885"
-        label.font = .systemFont(ofSize: 17, weight: .bold)
+        label.font = .systemFont(ofSize: 20, weight: .bold)
         return label
     }()
     
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Водитель"
-        label.font = .systemFont(ofSize: 23, weight: .bold)
+        label.font = .systemFont(ofSize: 24, weight: .bold)
         return label
     }()
     
     private let personNameLabel: UILabel = {
         let label = UILabel()
         label.text = "Nodirbek Khudoyberdiev"
-        label.font = .systemFont(ofSize: 20, weight: .bold)
+        label.font = .systemFont(ofSize: 22, weight: .bold)
         return label
     }()
     
@@ -101,7 +101,7 @@ class PersonTableViewCell: UITableViewCell {
         personImageView.snp.makeConstraints { make in
             make.top.equalTo(lineView.snp.bottom).offset(10)
             make.left.equalToSuperview().offset(15)
-            make.height.width.equalTo(60)
+            make.height.width.equalTo(56)
         }
         
         personNameLabel.snp.makeConstraints { make in
@@ -121,7 +121,7 @@ class PersonTableViewCell: UITableViewCell {
             make.left.equalTo(ratingLabel.snp.right).offset(3)
             make.centerY.equalTo(ratingLabel.snp.centerY)
             make.bottom.equalToSuperview().offset(-15)
-            make.width.equalTo(40)
+            make.width.equalTo(44)
         }
         
         numberOfPath.snp.makeConstraints { make in

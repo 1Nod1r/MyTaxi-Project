@@ -21,7 +21,7 @@ class GeneralInfoTableViewCell: UITableViewCell {
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Общие данные"
-        label.font = .systemFont(ofSize: 23, weight: .bold)
+        label.font = .systemFont(ofSize: 24, weight: .bold)
         return label
     }()
 

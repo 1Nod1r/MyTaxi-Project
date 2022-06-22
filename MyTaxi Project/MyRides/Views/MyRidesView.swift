@@ -9,37 +9,39 @@ import UIKit
 
 class MyRidesView: UIView {
     
+    var caseSections: [String] = ["7 Марта, Вторник", "5 Июля, Вторник"]
+    
     private var tableViewModel: [MyRidesTableViewCell.ViewModel] = [
         .init(firsLocation: "Chirchiq",
               secondLocation: "Toshkent",
               startTime: "19:15",
               endTime: "20:45",
-              carImage: UIImage(named: "redCar")!),
+              carImage: UIImage(named: "blackCar")!),
         .init(firsLocation: "Mirzo Ulug'bek",
               secondLocation: "Olmazor",
               startTime: "10:45",
               endTime: "12:00",
-              carImage: UIImage(named: "greenCar")!),
+              carImage: UIImage(named: "grayCar")!),
         .init(firsLocation: "Oybek",
               secondLocation: "Beruniy",
               startTime: "12:00",
               endTime: "13:00",
-              carImage: UIImage(named: "blueCar")!),
+              carImage: UIImage(named: "yellowCar")!),
         .init(firsLocation: "Chirchiq",
               secondLocation: "Toshkent",
               startTime: "19:15",
               endTime: "20:45",
-              carImage: UIImage(named: "redCar")!),
+              carImage: UIImage(named: "blackCar")!),
         .init(firsLocation: "Mirzo Ulug'bek",
               secondLocation: "Olmazor",
               startTime: "10:45",
               endTime: "12:00",
-              carImage: UIImage(named: "greenCar")!),
+              carImage: UIImage(named: "grayCar")!),
         .init(firsLocation: "Oybek",
               secondLocation: "Beruniy",
               startTime: "12:00",
               endTime: "13:00",
-              carImage: UIImage(named: "blueCar")!),
+              carImage: UIImage(named: "yellowCar")!),
     ]
     
     var completion: (() -> ())?
@@ -72,8 +74,21 @@ class MyRidesView: UIView {
 }
 
 extension MyRidesView: UITableViewDelegate, UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return caseSections.count
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tableViewModel.count
+        return tableViewModel.count / 2
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return caseSections[section]
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 29
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

@@ -150,8 +150,8 @@ class MyRidesTableViewCell: UITableViewCell {
         
         carImageView.snp.makeConstraints { make in
             make.right.bottom.equalToSuperview().offset(-5)
-            make.width.equalTo(80)
-            make.height.equalTo(80)
+            make.width.equalTo(108)
+            make.height.equalTo(39)
         }
     }
     

@@ -12,9 +12,18 @@ class PanelHelpTableViewCell: UITableViewCell {
     static let id = "PanelHelpTableViewCell"
     
     private var viewModel: [PanelHelpCollectionViewCell.ViewModel] = [
-        .init(image: UIImage(named: "question")!, backgroundColor: UIColor(hex: "FDF8EA")),
-        .init(image: UIImage(named: "retry")!, backgroundColor: UIColor(hex: "EDF2FC")),
-        .init(image: UIImage(named: "call")!, backgroundColor: UIColor(hex: "F0F9F3"))
+        .init(image: UIImage(named: "questionImage")!,
+              backgroundColor: UIColor(hex: "FEF8E8"),
+              tintColor: UIColor(hex: "EDB118"),
+              title: "Помощь"),
+        .init(image: UIImage(named: "retry")!,
+              backgroundColor: UIColor(hex: "ECF2FD"),
+              tintColor: UIColor(hex: "3F7BEB"),
+              title: "Повторить"),
+        .init(image: UIImage(named: "callImage")!,
+              backgroundColor: UIColor(hex: "EEF9F2"),
+              tintColor: UIColor(hex: "479F6A"),
+              title: "Позвонить")
     ]
     
     private let helpCollectionView: UICollectionView = {

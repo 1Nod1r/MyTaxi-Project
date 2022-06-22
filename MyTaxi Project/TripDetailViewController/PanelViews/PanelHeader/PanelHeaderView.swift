@@ -37,7 +37,7 @@ class PanelHeaderView: UITableViewHeaderFooterView {
     
     private let carImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "Lambo")
+        imageView.image = UIImage(named: "blackCar")
         imageView.layer.cornerRadius = 10
         imageView.clipsToBounds = true
         return imageView
@@ -76,9 +76,8 @@ class PanelHeaderView: UITableViewHeaderFooterView {
         carImageView.snp.makeConstraints { make in
             make.right.equalToSuperview().offset(-10)
             make.centerY.equalToSuperview()
-            make.top.equalToSuperview().offset(5)
-            make.bottom.equalToSuperview().offset(-5)
-            make.width.equalTo(100)
+            make.height.equalTo(38)
+            make.width.equalTo(104)
         }
         
         carNameLabel.snp.makeConstraints { make in
